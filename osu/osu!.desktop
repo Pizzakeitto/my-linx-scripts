@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=osu!
+Comment=Become an osu! rhythm champion!
+Icon=/home/pizzakeitto/.wineosu/osu!/icon.png
+Exec=/home/pizzakeitto/.wineosu/osu!/start.sh %u
+StartupWMClass=osu!.exe
+Categories=Game;
+MimeType=x-scheme-handler/discord-367827983903490050;x-scheme-handler/osu;
