@@ -1,0 +1,14 @@
+# Install Vencord automagically when installing or upgrading Discord
+
+[Trigger]
+# Trigger when installing or upgrading
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = discord
+
+[Action]
+Description = Install Vencord automagically when installing or upgrading Discord
+When = PostTransaction
+Depends = discord
+Exec = /bin/sh -c 'outfile=$(/usr/bin/mktemp); /usr/bin/curl -sS https://github.com/Vendicated/VencordInstaller/releases/latest/download/VencordInstallerCli-Linux --output "$outfile" -L -f; /usr/bin/chmod +x "$outfile"; "$outfile" -install -location /opt/discord'
